@@ -1,0 +1,212 @@
+/*---------------------------------------- Globals ----------------------------------------*/
+html,
+body,
+#root {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: auto!important;
+  overflow:initial!important;
+}
+* {
+box-sizing: inherit !important;
+}
+*:before, *:after {
+box-sizing: inherit !important;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+table {
+  border-collapse: collapse;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+footer {
+  background-color: #EBF6FC;
+  color: black;
+  font-size: 16px;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4em;
+}
+
+@media all {
+  #print-element {
+    display: none;
+  }
+}
+
+@media print {
+  html, body {
+    height: initial !important;
+    overflow: initial !important;
+    -webkit-print-color-adjust: exact;
+  }
+  #print-element {
+    display: block!important;
+    margin: 0 0 0!important;
+  }
+  #print-report-header {
+    display: block;
+  }
+  #print-report-header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 2.5vh 0;
+  }
+  #print-list-body {
+    width: 100%;
+    padding: 0 2.5vh;
+  }
+}
+
+@page {
+  size: auto;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/*---------------------------------------- General ----------------------------------------*/
+/*---------------------------------------- Classes ----------------------------------------*/
+.btn-reports-submit {
+  margin: 30px 0 0 125px;
+  position: fixed;
+  background-color: #01A3E0;
+  font-weight: 600;
+  color: white;
+  padding: 20px 60px;
+  border: 2px solid #01A3E0;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  outline: none!important;
+  box-shadow: none!important;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-reports-submit:hover {
+  background-color: white;
+  color: #01A3E0;
+  text-decoration: none;
+}
+.btn-reports-submit:active {
+  background-color: #01A3E0;
+  color: white;
+  text-decoration: none;
+}
+.div-loading-component {
+  width: 100%;
+  height: 200px;
+}
+.div-relative {
+  position: relative;
+}
+.div-report-date {
+  display: block;
+  position: relative;
+  width: auto!important;
+}
+.div-report-date label {
+  font-weight: 600;
+}
+.div-report-date-ranges {
+  display: flex!important;
+}
+.div-reports-lookup {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.div-reports-lookup button:not(:last-child) {
+  margin-right: 20px;
+}
+.div-reports-lookup div {
+  display: block;
+}
+.div-reports-lookup div:not(:last-child) {
+  margin-right: 40px;
+}
+.h1-reports-title {
+  margin: 10px 0 20px;
+}
+.header-title-one {
+  font-weight: 700;
+  letter-spacing: 2.3px;
+  color: #01A3E0;
+  text-decoration: none!important;
+}
+.header-title-one:hover {
+  text-decoration: none!important;
+}
+.header-title-two {
+  color: #212529;
+  font-weight: 400;
+  text-decoration: none!important;
+}
+.header-title-two:hover {
+  text-decoration: none!important;
+}
+.input-reports-calander {
+  display: block;
+  border: 2px solid #CCCCCC!important;
+  border-radius: 5px!important;
+  padding: 4px 10px;
+}
+.input-reports-calander-error {
+  display: block;
+  border: 2px solid #dc3545!important;
+  border-radius: 5px!important;
+  padding: 4px 10px;
+}
+.label-report-input {
+  font-weight: 600;
+}
+.p-absolute-error-compare-dates {
+  color: #dc3545;
+  position: absolute;
+  top: 115px;
+  left: 80px;
+  z-index: 5;
+}
+.p-absolute-error-start-end-dates {
+  color: #dc3545;
+  position: absolute;
+  top: 85px;
+  left: 40px;
+  z-index: 5;
+}
+.p-disabled {
+  margin-bottom: 0;
+  background-color: #CCCCCC;
+  font-weight: 600;
+  color: white;
+  padding: 5px 10px;
+  border: 2px solid #CCCCCC;
+  border-radius: 4px;
+  user-select: none;
+}
+.p-disabled:not(:last-child) {
+  margin-right: 20px;
+}
+.page-container {
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.page-margin-top {
+  margin-top: 30px;
+}
